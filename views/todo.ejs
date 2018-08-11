@@ -1,0 +1,43 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<style>
+    h2 {
+        font-family:arial;
+    }
+
+    form {
+        display: inline-block;
+    }
+
+    .list {
+        font-family:"Trebuchet MS";
+        font-size:20px;
+        color:#000000;
+        cursor:pointer;
+    }
+</style>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2>To Do List</h2>
+            <form name="checkListForm">
+                <input type="text" name="checkListItem" placeholder="Add Item..."/>
+            </form>
+            <button type="button" id="add" class="btn btn-info">Add</button>
+            <button type="button" id="clear" title="Clear checked items" class="btn btn-default">clear</button>
+            <br/><br/>
+            <div class="list"></div>
+        </div>
+        <div class="col-md-4">
+            <ul>
+                <% for(var i=0;i<todos.length;i++ ) { %>
+                <li><%= todos[i].item %></li>
+              <%  } %>
+            </ul>
+        </div>
+    </div>
+</div>
